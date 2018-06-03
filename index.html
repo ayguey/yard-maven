@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yard Maven</title>
+    <link rel="stylesheet" href="stylesheets/css/styles.css" /> 
+</head>    
+<body>
+<div class="centerline">
+    <div class="mainSection">
+        <div class="nav">
+            <table>
+                <tr>
+                    <td>HOME</td>
+                    <td><a href="gallery/gallery.html">GALLERY</a></td>
+                    <td><a href="services/services.html">SERVICES</a></td>
+                    <td><a href="contact/contact.html">CONTACT</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="mainContent">
+            <div id="slider1">   
+                <div class="viewport">
+                    <ul class="overview">
+                        <li id="image1"></li>
+                        <li id="image2"></li>
+                        <li id="image3"></li>
+                        <li id="image4"></li>
+                        <li id="image5"></li>	
+                    </ul>
+                </div>
+            </div>
+            <div class="tagline">
+                <div><h2>Yard Maven</h2>
+                Your complete Design, Landscaping and Maintenance solution.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="scripts/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.tinycarousel.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        //if($(window).width() > 767) { 
+            $('#slider1').tinycarousel();	
+        //}
+    });
+    console.log($(window).width());
+    console.log(screen.height);
+</script>
+</body>    
+</html>

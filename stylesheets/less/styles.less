@@ -1,0 +1,406 @@
+/**********************
+       CONSTANTS
+***********************/
+
+@defaultWhite: #fff;
+@borderColor: #ccc8bf;
+@navBackground: #6ea930;
+@navHover: #fcf40a;
+@contentColor: #f0f5ce;
+@thumbColor: #bbb;
+
+
+/**********************
+         STYLES
+***********************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.centerline {
+    position: relative;
+    width: 798px;
+    height: 598px;
+    z-index: 1;
+    background-color: @defaultWhite;
+    margin: 0 auto;
+    margin-top: 25px; 
+    border: 1px solid @borderColor;
+}
+
+.mainSection {
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 748px;
+}
+
+.nav {
+    height: 30px;
+    background-color: @navBackground;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: @defaultWhite;
+    font-size: 12px;
+    line-height: 26px;
+
+    td {
+        padding: 0 15px;
+    }
+    
+    a {
+        color: @defaultWhite;
+        text-decoration: none;
+        
+        &:hover {
+            color: @navHover;
+        }
+    }
+}
+
+.mainContent {
+    position:relative;
+    background-color: @contentColor;
+    height: 100%;
+}
+
+.mixin-content {
+    background-color: @contentColor;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    color: #7e8156;    
+}
+
+.mixin-div {
+    font-size: 90%;
+    padding: 10px;    
+}
+
+.mixin-service-contact {
+    float: left;
+    width: 374px;
+    height: 510px;
+}
+
+.tagline {
+    .mixin-content;
+    height: 75px;
+    
+    & div {
+        .mixin-div;    
+    }
+}
+
+.mixin-service-content {    
+    margin-top: 25px;
+    
+    h2 {
+        padding: 10px 0 0 0;
+    }
+        
+    a {
+        text-decoration: none; 
+    }
+    
+    p {
+        padding: 10px 0;
+    }    
+}
+
+.services {
+    .mixin-content;
+    
+    & div {
+        .mixin-div;
+    }
+    .mixin-service-contact;
+    
+    & .services-content {
+        .mixin-service-content;    
+    }
+    
+    a {
+        text-decoration: none;
+        color: #7e8156;
+    }
+
+    & .services-content-mobile {
+        display: none;
+    }
+}
+
+
+
+.contact {
+    .mixin-content;
+    & div {
+        .mixin-div;
+    }
+    .mixin-service-contact;
+    
+    & p {
+        padding: 10px 0;    
+    }
+}
+
+.display {
+    float: left;
+    width: 374px;
+
+    &-services {
+        background-image: url('/images/services/image1.jpg');
+        background-repeat: no-repeat;
+        width: 374px;
+        height: 510px;
+    }
+}
+
+.thumb-gallery {
+    padding: 10px 10px 10px 25px;
+    height: 414px;
+}
+
+.thumb-img {
+    padding: 5px;
+    background: white;
+    border: 1px solid @thumbColor;
+    margin: 15px 12px 15px 0;
+    width: 150px;
+}
+
+#image1 {
+    background-image: url('/images/carousel/image1.jpg');
+    background-repeat: no-repeat;    
+}
+
+#image2 {
+    background-image: url('/images/carousel/image2.jpg');
+    background-repeat: no-repeat;
+}
+#image3 {
+    background-image: url('/images/carousel/image3.jpg');
+    background-repeat: no-repeat;
+}
+#image4 {
+    background-image: url('/images/carousel/image4.png');
+    background-repeat: no-repeat;
+}
+#image5 {
+    background-image: url('/images/carousel/image5.jpg');
+    background-repeat: no-repeat;
+}
+
+
+
+/**********************
+    TINY CAROUSEL
+***********************/
+#slider1 {
+    height: 100%;
+    overflow:hidden;
+    padding: 0 0 4px 0;
+
+
+    & .viewport {
+        float: left;
+        width: 748px;
+        height: 430px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    & .next {
+        background-position: 0 0;
+        margin: 30px 0 0 10px;
+    }
+    
+    & .disable {
+        visibility: hidden;
+    }
+    
+    & .overview {
+        list-style: none;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        left: 0;
+        top: 0;
+    
+    
+        li{
+            float: left;
+            height: 420px;
+            width: 748px;
+        }
+    }    
+}
+
+@media all and (max-width:667px) {
+
+    body {
+        padding: 20px;
+    }
+    .centerline {
+        position: relative;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        background-color: @defaultWhite;
+        margin: 0;
+        margin-top: 0; 
+        border: none;
+    }    
+    .mainSection {
+        margin: 0;
+        margin-top: 0;
+        width: auto;
+    }
+
+    #slider1 {
+        .viewport {
+            width: 372px;
+            height: 230px;
+        }
+
+        .overview {
+            li {
+                height: 230px;
+            }
+            #image1 {
+                background-image: url('/images/carousel/image1-400.jpg');
+                background-repeat: no-repeat;
+            }
+            #image2 {
+                background-image: url('/images/carousel/image2-400.jpg');
+                background-repeat: no-repeat;;
+            }
+            #image3 {
+                background-image: url('/images/carousel/image3-400.jpg');
+                background-repeat: no-repeat;;
+            }       
+            #image4 {
+                background-image: url('/images/carousel/image4-400.png');
+                background-repeat: no-repeat;;
+            }
+            #image5 {
+                background-image: url('/images/carousel/image5-400.jpg');
+                background-repeat: no-repeat;;
+            }
+        }
+    }
+    .mixin-service-contact {
+        float: left;
+        width: 50%;
+        height: 273px;
+    }
+
+    .mixin-service-content {    
+        margin-top: 5px;
+        
+        h2 {
+            padding: 2px 0 0 0;
+        }
+            
+        a {
+            text-decoration: none; 
+        }
+        
+        p {
+            padding: 0 0;
+        }    
+    }
+
+    .services {
+        .mixin-content;
+        
+        & div {
+            .mixin-div;
+        }
+        .mixin-service-contact;
+        
+        & .services-content {
+            display: none; 
+        }
+        
+        a {
+            text-decoration: none;
+            color: #7e8156;
+        }
+
+        & .services-content-mobile {
+            display: block;
+            .mixin-service-content;
+        }
+        
+    } 
+
+    .display {
+        float: left;
+        width: 50%;
+
+         &-services {
+            background-image: url('/images/services/image1-200.jpg');
+            background-repeat: no-repeat;
+            float: left;
+        }
+    }   
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+    body {
+        padding: 20px;
+    }
+    .centerline {
+        position: relative;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        background-color: @defaultWhite;
+        margin: 0;
+        margin-top: 0; 
+        border: none;
+    }    
+    .mainSection {
+        margin: 0;
+        margin-top: 0;
+        width: auto;
+    }
+   #slider1 {
+        .viewport {
+            width: 700px;
+            height: 393px;
+        }
+
+        .overview {
+            li {
+                height: 393px;
+            }
+            #image1 {
+                background-image: url('/images/carousel/image1-700.jpg');
+                background-repeat: no-repeat;
+            }
+            #image2 {
+                background-image: url('/images/carousel/image2-700.jpg');
+                background-repeat: no-repeat;;
+            }
+            #image3 {
+                background-image: url('/images/carousel/image3-700.jpg');
+                background-repeat: no-repeat;;
+            }       
+            #image4 {
+                background-image: url('/images/carousel/image4-700.png');
+                background-repeat: no-repeat;;
+            }
+            #image5 {
+                background-image: url('/images/carousel/image5-700.jpg');
+                background-repeat: no-repeat;;
+            }
+        }
+    }
+}
+

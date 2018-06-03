@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="../stylesheets/css/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../stylesheets/css/styles.css" /> 
+</head>
+<body>
+<div class="centerline">
+    <div class="mainSection">
+        <div class="nav">
+            <table>
+                <tr>
+                    <td><a href="../index.html">HOME</a></td>
+                    <td>GALLERY</td>
+                    <td><a href="../services/services.html">SERVICES</a></td>
+                    <td><a href="../contact/contact.html">CONTACT</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="mainContent">
+            <div class="thumb-gallery">
+                <a class="fancybox" rel="group" href="../images/gallery/image1.jpg"><img src="../images/thumbnails/image1.jpg" alt="" width="150" height="150" class="thumb-img" /></a>
+                <a class="fancybox" rel="group" href="../images/gallery/image2.jpg"><img src="../images/thumbnails/image2.jpg" alt="" width="150" height="150" class="thumb-img" /></a>
+                <a class="fancybox" rel="group" href="../images/gallery/image3.jpg"><img src="../images/thumbnails/image3.jpg" alt="" width="150" height="150" class="thumb-img" /></a>
+                <a class="fancybox" rel="group" href="../images/gallery/image4.jpg"><img src="../images/thumbnails/image4.jpg" alt="" width="150" height="150" class="thumb-img" /></a>
+                <br/>
+                <a class="fancybox" rel="group" href="../images/gallery/image5.jpg"><img src="../images/thumbnails/image5.jpg" alt="" width="150" height="150" class="thumb-img" /></a>
+                <a class="fancybox" rel="group" href="../images/gallery/image6.jpg"><img src="../images/thumbnails/image6.jpg" alt="" width="150" height="150" class="thumb-img" /></a>
+                <a class="fancybox" rel="group" href="../images/gallery/image7.jpg"><img src="../images/thumbnails/image7.jpg" alt="" width="150" height="150" class="thumb-img" /></a>
+                <a class="fancybox" rel="group" href="../images/gallery/image8.jpg"><img src="../images/thumbnails/image8.jpg" alt="" width="150" height="150" class="thumb-img" /></a>
+            </div>
+            <div class="tagline">
+                <div><h2>Image Gallery</h2>
+                Click through to view a selection of photos.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../scripts/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+	    $(".fancybox").fancybox();
+    });
+</script>
+</body>
+</html>
